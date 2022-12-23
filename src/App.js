@@ -1,10 +1,13 @@
-import ResponsiveAppBar from './Components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HeaderNavbar from './components/Navbar/Navbar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
 function App() {
   return (
-    <div>
-      <ResponsiveAppBar/>
+    <div >
+      <HeaderNavbar/>
+      <ItemListContainer/>
     </div>
   );
 }
