@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Logo from '../../assets/Logo.png';
 import CartWidget from '../CartWidget/CartWidget';
 
 function HeaderNavbar() {
@@ -10,7 +9,7 @@ function HeaderNavbar() {
         <Navbar bg="light" variant="light" className="border-bottom">
             <Container className="justify-content-around">
                 <Navbar.Brand href="#home">
-                    <img src={Logo} className="align-top" width="150" height="70" />
+                    <img src="./img/Logo.png" className="align-top" width="150" height="70" />
                 </Navbar.Brand>
 
                 <Nav className='flex-grow-1 justify-content-center align-items-center'>

@@ -3,7 +3,6 @@ import Badge from 'react-bootstrap/Badge';
 import { BsFillCartFill } from 'react-icons/bs';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Shirt from "../../assets/img/01.png";
 
 
 const CartWidget = () => {
@@ -16,7 +15,7 @@ const CartWidget = () => {
             </Dropdown.Toggle>
             <Dropdown.Menu align={{ lg: 'end' }} className="me-3 p-3 mt-3" >
                 <Card style={{ width: '18rem', border: 'none' }}>
-                <Card.Img variant="top" src={ Shirt } />
+                <Card.Img variant="top" src="./img/01.png" />
                 <Card.Body className="p-1 mt-3">
                     <Card.Title>Remera Algodón</Card.Title>
                     <Card.Text>

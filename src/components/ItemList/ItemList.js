@@ -5,9 +5,7 @@ const ItemList = ( { products } ) => {
 
     return (
 
-        <div className="container my-5">
-            <h2>Nuestros Productos</h2>
-            <hr/>
+        <div className="container my-2">
             <section className="row my-4">
                 { products.map((prod) => (
                     <Item prod={ prod } />
