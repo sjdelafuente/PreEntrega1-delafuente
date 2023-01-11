@@ -1,33 +1,31 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { reqProducts } from '../../helpers/reqProducts';
+import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import ItemList from '../ItemList/ItemList';
 
-const ItemListContainer = ( { greeting } ) => {
+const ItemListContainer = () => {
 
-    const [products, setProducts] = React.useState([]);
-
-    React.useEffect(() => {
+    const [products, setProducts] = useState([]);
+    const { categoryId } = useParams();
+    
+    useEffect(() => {
         reqProducts()
         .then((res) => {
-            setProducts(res)
+            if (categoryId) {
+                setProducts( res.filter(product => product.category == categoryId) )
+            }else{
+                setProducts(res)
+            }
         })
         .catch((err) => {
             console.log(err)
         })
-    }, [])
+    }, [categoryId])
     
 
     return (
         <Container fluid>
-            <div className="container pt-5">
-                <div className="row justify-content-start">
-                    <div className="col-lg-6">
-                        <h2 className="title"> { greeting } </h2>
-                        <hr/>
-                    </div>
-                </div>
-            </div>
             <ItemList products={ products } />
         </Container>
     )
